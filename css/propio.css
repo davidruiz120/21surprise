@@ -1,0 +1,257 @@
+@font-face {
+    font-family: RobotoLight;
+    src: url("../assets/Roboto-Light.ttf");
+}
+@font-face {
+    font-family: Michland;
+    src: url("../assets/Michland\ Script.otf");
+}
+
+body {
+    font-family: 'RobotoLight' !important;
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+  
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+  
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.0;
+    z-index: 1;
+}
+
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('../assets/hl-m.jpg') black no-repeat center center scroll;
+        background-size: 100%;
+    }
+
+    header video {
+        display: none;
+    }
+
+    #logoPrincipal {
+        position: relative;
+        top: -140px;
+        width: 300px;
+    }
+
+    .scrolldown {
+        border: 2px solid #ffffff !important;
+    }
+
+    .scrolldown-p1,
+    .scrolldown-p2 {
+        fill: #ffffff !important;
+    }
+
+    .fondoSeccionCodigo {
+        background-image: url('../assets/bg-bottom-m.jpg') !important;
+        background-size: 250%;
+    }
+}
+
+
+
+
+.fondoSeccionCodigo {
+    background-image: url('../assets/bg-bottom.webp');
+    min-height: 1320px;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+}
+
+/* .fondoSeccionCodigo::before {
+    background: linear-gradient(180deg,transparent,#000);
+    bottom: 0;
+    content: "";
+    height: 280px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.fondoSeccionCodigo::after {
+    background: linear-gradient(0deg,rgba(23,30,29,0),#171e1d);
+    content: "";
+    height: 100px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+} */
+
+
+header:after {
+    background: linear-gradient(180deg,rgba(23,30,29,0),#171e1d);
+    bottom: 0;
+    content: "";
+    height: 100px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+
+
+
+/* Flecha */
+.scrolldown-wrapper {
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	bottom: 50px;
+	transform: translate(-50%, -50%);
+}
+  
+.scrolldown {
+	border: 2px solid #000000;
+	border-radius: 30px;
+	height: 46px;
+	margin: 0 auto 8px;
+	text-align: center;
+	width: 30px;
+}
+
+.scrolldown-p1,
+.scrolldown-p2 {
+	animation-duration: 1.5s;
+	animation-name: scrolldown;
+	animation-iteration-count: infinite;
+	fill: #000000;
+}
+  
+.scrolldown-p2 {
+	animation-delay: .75s;
+}
+
+@keyframes scrolldown {
+	0% {
+		opacity: 0;
+		transform: translate(0, -8px);
+	}
+	50% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(0, 8px);
+	}
+}
+
+
+
+
+.cartaDiv {
+    background-color: #eed592 !important;
+    font-family: 'Michland' !important;
+    font-size: 2.2em !important;
+}
+
+
+
+.logoColegioHogwarts {
+    display:block;
+    margin:auto;
+    top: 150px;
+}
+
+
+
+
+
+.bird {
+    position: relative;
+    top: 50px;
+    display:block;
+    margin:auto;
+    background: black;
+    border-radius: 50% 50% 20% 20%;
+    color: white;
+    width: 15px;
+    height: 15px;
+    animation: bird-ani 0.8s linear infinite;
+}
+
+.bird::after, .bird::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50;
+}
+
+.bird::after {
+    border-radius: 100% 100% 0 0;
+    box-shadow: inset 0px 5px 0 black;
+    width: 100px;
+    height: 100px;
+    margin-top: -7px;
+    margin-left: -43px;
+    transform-origin: 100% 0%;
+    animation: wing 3s linear infinite;
+}
+
+.bird::before {
+    background: #FFC37F;
+    border-radius: 100% 0% 20% 0%;
+    margin-top: 3px;
+    margin-left: 4px;
+    width: 6px;
+    height: 6px;
+    transform: rotateZ(45deg);
+}
+
+@keyframes wing{
+    50% {
+        transform: rotateX(-1440deg);
+    }
+}
+
+@keyframes bird-ani{
+    40%{
+        transform: rotateZ(2deg) translateX(2px) translateY(10px) translateZ(0);
+    }
+    80%{
+        transform: rotateZ(2-deg) translateX(5px) translateY(8px) translateZ(0);
+    }
+}
+
+
+
+.textoSend{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+}
